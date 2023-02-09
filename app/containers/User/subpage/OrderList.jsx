@@ -16,13 +16,12 @@ class OrderList extends React.Component {
         }
     }
     render() {
-        // console.log(!!this.state.data.length)
+        // console.log(!!this.state.data)
         return (
             <div className="order-list-container">
                 <h2>您的订单</h2>
                 {
                     this.state.data.length
-                    // 通过组件来展示数据
                     ? <OrderListComponent data={this.state.data} submitComment={this.submitComment.bind(this)}/>
                     : <div>{/* loading */}</div>
                 }
@@ -31,10 +30,8 @@ class OrderList extends React.Component {
     }
     componentDidMount() {
         // 获取订单数据
-        const username = this.props.username
-        if (username) {
-            this.loadOrderList(username)
-        }
+        const { UserName } = this.props
+        UserName ? this.loadOrderList(UserName) : null 
     }
     // 获取列表数据
     loadOrderList(username) {

@@ -3,6 +3,9 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import './style.less'
 
+
+
+
 class UserInfo extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -14,12 +17,12 @@ class UserInfo extends React.Component {
                 <p>
                     <i className="icon-user"></i>
                     &nbsp;
-                    <span>{this.props.username}</span>
+                    <span>{this.props.UserName}</span>
                 </p>
                 <p>
                     <i className="icon-map-marker"></i>
                     &nbsp;
-                    <span>{this.props.city}</span>
+                    <span>{this.props.City}</span>
                 </p>
             </div>
         )

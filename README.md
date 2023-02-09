@@ -25,5 +25,3 @@
   ```
 * [X] 在Login页面登陆后、刷新页面、Redux数据消失 --> 解决办法  1、使用localstoreage  2、redux持久化(persist)
 * [ ] 12
-
-React16+Redux 实战企业级大众点评Web App：  [https://coding.imooc.com/class/chapter/313.html#Anchor](https://coding.imooc.com/class/chapter/313.html#Anchor)

@@ -22,19 +22,21 @@ class User extends React.Component {
     }
     render() {
         const userinfo = this.props.userinfo
+        // console.log(userinfo) // {cityName: '北京'}
+        userinfo.username = "zhangsan"
         return (
             <div>
-                {/* backRouter: '/' */}
                 <Header title="用户主页" backRouter="/"/>
-                <UserInfo username={userinfo.username} city={userinfo.cityName}/>
-                <OrderList username={userinfo.username}/>
+                <UserInfo UserName={userinfo.username} City={userinfo.cityName}/>
+                <OrderList UserName={userinfo.username}/>
             </div>
         )
     }
+    // http://localhost:8080/#/User
     componentDidMount() {
-        // 如果未登录，跳转到登录页面
+        // 如果未登录，跳转到登录页面 || 刷新页面redux数据丢失
         if (!this.props.userinfo.username) {
-            hashHistory.push('/Login')
+            // hashHistory.push('/Login')
         }
     }
 } 
