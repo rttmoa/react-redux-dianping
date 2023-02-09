@@ -11,7 +11,7 @@
 * [X] 端口：本地(8080)，Mock(3000)
 * [X] Webpack配置(开发与生产环境)
 * [X] Class组件开发
-* [X] 轮播图 | 超值特惠 | 猜你喜欢 本地图片渲染  远程地址(error)
+* [X] 轮播图 | 超值特惠 | 猜你喜欢 本地图片渲染 &  远程地址(error)
 * [X] import * as Name from ""
 
   ```
@@ -25,4 +25,5 @@
   export default connect( mapStateToProps, mapDispatchToProps )(Home)
   ```
 * [X] 在Login页面登陆后、刷新页面、Redux数据消失 --> 解决办法  1、使用localstoreage  2、redux持久化(persist)
-* [ ] 12
+* [ ] Login页面父子组件传值
+* [ ] User页面组件封装(订单评价)

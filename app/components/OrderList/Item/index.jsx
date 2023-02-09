@@ -1,10 +1,12 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
 // import { postComment } from '../../../fetch/user/orderlist.js'
 import Star from '../../Star'
-
+import Img from './hamburger.png'
 import './style.less'
+
+
+
 
 // 用户主页 - 您的订单渲染
 // 渲染评价的状态、控制显示与隐藏及颜色、评价几颗星处理Star、评价的回调函数及星星的回调函数
@@ -26,6 +28,7 @@ class Item extends React.Component {
                 <div className="clear-fix">
                     <div className="order-item-img float-left">
                         {/* <img src={data.img}/> */}
+                        <img src={Img} />
                     </div>
                     <div className="order-item-comment float-right">
                         {

@@ -41,9 +41,7 @@ class OrderList extends React.Component {
         }).then(json => {
             // console.log('获取列表数据', json) // {id: 1665540613216, img: '0627.png', title: '汉堡大王', count: 3, price: '167', …} 
             // 获取数据
-            this.setState({
-                data: json
-            })
+            this.setState({ data: json })
         }).catch(ex => {
             if (__DEV__) {
                 console.error('用户主页“订单列表”获取数据报错, ', ex.message)

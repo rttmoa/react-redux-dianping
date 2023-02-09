@@ -12,6 +12,8 @@ class OrderList extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+        
+        // 接口数据 + 提交评论
         const data = this.props.data
         const submitComment = this.props.submitComment
 

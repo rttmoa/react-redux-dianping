@@ -23,7 +23,7 @@ class RouterMap extends React.Component {
         // console.log(this.props) // :history
         return (
             <Router history={this.props.history}>
-                <Route path='/' component={App}>
+                <Route path='/' component={App}>{/* ! */}
                     <IndexRoute component={Home}/>
                     <Route path='/city' component={City}/>
                     <Route path='/Login(/:router)' component={Login}/>{/* ! */}
