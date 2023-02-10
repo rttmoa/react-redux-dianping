@@ -4,6 +4,8 @@
 
 **启动：**`npm run mock & npm start`
 
+**改动程序需多次重启服务**
+
 **项目已备份**
 
 **[Url](https://coding.imooc.com/class/chapter/313.html#Anchor](https://coding.imooc.com/class/chapter/313.html#Anchor))**
@@ -27,3 +29,4 @@
 * [X] 在Login页面登陆后、刷新页面、Redux数据消失 --> 解决办法  1、使用localstoreage  2、redux持久化(persist)
 * [ ] Login页面父子组件传值
 * [ ] User页面组件封装(订单评价)
+* [ ] 123

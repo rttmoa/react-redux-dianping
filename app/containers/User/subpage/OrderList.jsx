@@ -6,6 +6,8 @@ import OrderListComponent from '../../../components/OrderList'
 
 import './style.less'
 
+
+
 // 用户主页 -> 您的订单
 class OrderList extends React.Component {
     constructor(props, context) {
@@ -16,15 +18,11 @@ class OrderList extends React.Component {
         }
     }
     render() {
-        // console.log(!!this.state.data)
+        // console.log(this.state.data)
         return (
             <div className="order-list-container">
                 <h2>您的订单</h2>
-                {
-                    this.state.data.length
-                    ? <OrderListComponent data={this.state.data} submitComment={this.submitComment.bind(this)}/>
-                    : <div>{/* loading */}</div>
-                }
+                {this.state.data.length ? <OrderListComponent data={this.state.data} submitComment={this.submitComment.bind(this)}/> : (<div></div>)}
             </div>
         )
     }
@@ -35,11 +33,12 @@ class OrderList extends React.Component {
     }
     // 获取列表数据
     loadOrderList(username) {
-        const result = getOrderListData(username)  // Promise<Response>
+        const result = getOrderListData(username)  
         result.then(res => {
+            // console.log(res) // http://localhost:8080/api/orderlist/zhangsan
             return res.json()
         }).then(json => {
-            // console.log('获取列表数据', json) // {id: 1665540613216, img: '0627.png', title: '汉堡大王', count: 3, price: '167', …} 
+            // console.log(json) // {id: 1665540613216, img: '0627.png', title: '汉堡大王', count: 3, price: '167', …} 
             // 获取数据
             this.setState({ data: json })
         }).catch(ex => {

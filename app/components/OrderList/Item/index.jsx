@@ -26,10 +26,12 @@ class Item extends React.Component {
             // 渲染处理的每一条数据
             <div className="order-item-container">
                 <div className="clear-fix">
+
                     <div className="order-item-img float-left">
                         {/* <img src={data.img}/> */}
                         <img src={Img} />
                     </div>
+
                     <div className="order-item-comment float-right">
                         {
                             this.state.commentState === 0
@@ -43,6 +45,7 @@ class Item extends React.Component {
                                 : <button className="btn unseleted-btn">已评价</button>
                         }
                     </div>
+                    
                     <div className="order-item-content">
                         <span>商户：{data.title}</span>
                         <span>数量：{data.count}</span>

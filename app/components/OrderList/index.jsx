@@ -13,7 +13,7 @@ class OrderList extends React.Component {
     }
     render() {
         
-        // 接口数据 + 提交评论
+        // 订单接口数据 + 提交评价
         const data = this.props.data
         const submitComment = this.props.submitComment
 

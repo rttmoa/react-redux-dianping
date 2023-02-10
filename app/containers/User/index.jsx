@@ -32,6 +32,7 @@ class User extends React.Component {
             </div>
         )
     }
+    
     // http://localhost:8080/#/User
     componentDidMount() {
         // 如果未登录，跳转到登录页面 || 刷新页面redux数据丢失
