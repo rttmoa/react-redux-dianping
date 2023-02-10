@@ -8,6 +8,7 @@ import UserInfo from '../../components/UserInfo'
 import OrderList from './subpage/OrderList'
 
 
+
 /***--- 
  * 用户页面
  * 一、渲染评价的状态(未评价、已评价、评价中、提交、取消)、
@@ -28,6 +29,7 @@ class User extends React.Component {
             <div>
                 <Header title="用户主页" backRouter="/"/>
                 <UserInfo UserName={userinfo.username} City={userinfo.cityName}/>
+                {/* GET、POST接口 */}
                 <OrderList UserName={userinfo.username}/>
             </div>
         )

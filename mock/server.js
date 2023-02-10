@@ -100,7 +100,7 @@ router.get('/api/detail/comment/:page/:id', function *(next) {
 
 // 订单列表
 const orderList = require('./orderlist/orderList.js')
-router.get('/api/orderlist/:username', function *(next) {
+router.get('/api/orderlist/:username', function(next) {
     console.log('订单列表')
 
     const params = this.params

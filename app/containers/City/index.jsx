@@ -54,22 +54,15 @@ class City extends React.Component {
         // 跳转页面
         hashHistory.push('/')
     }
-}
-
-// -------------------redux react 绑定--------------------
-
+} 
 function mapStateToProps(state) {
     return {
         userinfo: state.userinfo
     }
-}
-
+} 
 function mapDispatchToProps(dispatch) {
     return {
         userInfoActions: bindActionCreators(userInfoActionsFromOtherFile, dispatch)
     }
 }
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(City)
+export default connect( mapStateToProps, mapDispatchToProps )(City)
