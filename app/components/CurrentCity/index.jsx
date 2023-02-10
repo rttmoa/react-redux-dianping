@@ -10,7 +10,8 @@ class CurrentCity extends React.Component {
     }
     render() {
         return (
-            <div className="current-city">{/* css样式： bgc、padding、text-align、border-bottom */}
+            // css样式： bgc、padding、text-align、border-bottom
+            <div className="current-city">
                 <h2>{this.props.cityName}</h2>
             </div>
         )

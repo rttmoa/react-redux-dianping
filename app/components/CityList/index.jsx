@@ -50,13 +50,13 @@ class CityList extends React.Component {
                         <span onClick={this.clickHandle.bind(this, '西安')}>西安</span>
                     </li>
                     <li>
-                        <span onClick={this.clickHandle.bind(this)}>测试null</span>
+                        <span onClick={this.clickHandle.bind(this)}>无参</span>
                     </li>
                     <li>
-                        <span onClick={this.clickHandle.bind(this, null)}>测试null</span>
+                        <span onClick={this.clickHandle.bind(this, null)}>null</span>
                     </li>
                     <li>
-                        <span onClick={this.clickHandle.bind(this, undefined)}>测试undefined</span>
+                        <span onClick={this.clickHandle.bind(this, undefined)}>undefined</span>
                     </li>
                 </ul>
             </div>

@@ -30,4 +30,12 @@
 * [ ] Login页面父子组件传值
 * [ ] User页面组件封装(订单评价)
 * [ ] User页面订单列表接口 & 提交评论接口
-* [ ] 1
+* [ ] City页面
+
+  ```
+  Redux取值、Redux储存、localstoreage存储、history跳转
+  ```
+* [ ] a
+* [ ] 啊
+* [ ] 的
+* [ ] 的

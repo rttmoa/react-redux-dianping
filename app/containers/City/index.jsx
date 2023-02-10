@@ -34,19 +34,16 @@ class City extends React.Component {
         )
     }
     changeCity(newCity) {
-        // console.log(typeof newCity) // 如果null是object / undefined是undefined 
-        // if(newCity == null){console.log(123)}
-        // if(newCity === null){console.log(234)}
+        // console.log(newCity) // 分别测试 null和undefined的取值
+        // console.log(newCity == null)
+        // console.log(newCity === null)
+        // console.log(newCity == undefined)
+        // console.log(newCity === undefined)
         // return
-        if (newCity == null || newCity ==  Object) {
-            console.log(123)
-            return
-        }
-        // return
-        // 修改 redux
+        if (newCity == null || newCity ==  Object) { return }
         const userinfo = this.props.userinfo
         userinfo.cityName = newCity
-        this.props.userInfoActions.update(userinfo)
+        this.props.userInfoActions.update(userinfo) 
 
         // 修改 cookie
         localStore.setItem(CITYNAME, newCity)
