@@ -29,7 +29,7 @@ class LoadMore extends React.Component {
         const wrapper = this.refs.wrapper
         let timeoutId
         function callback() {
-            console.log(333)
+            // console.log(333)
             const top = wrapper.getBoundingClientRect().top   // 加载更多盒子距离最顶部的距离 
             const windowHeight = window.screen.height; // S8+: 740(可以滚动)     S20U: 915(不可滚动)
             // console.log('top', top)
@@ -44,7 +44,7 @@ class LoadMore extends React.Component {
                 // console.log(111)
                 clearTimeout(timeoutId)
             }
-            console.log(222)
+            // console.log(222)
             timeoutId = setTimeout(callback, 1000)
         }.bind(this), false);
     }

@@ -59,7 +59,7 @@ class SearchList extends React.Component {
         const page = this.state.page
         const keyword = this.props.keyword || ""
         const category = this.props.category
-        const result = getSearchData(page, cityName, category, keyword)
+        const result = getSearchData(page, cityName, category, keyword) //-->    /api/search/0/北京/all/UserName长
         this.resultHandle(result)
 
         // 更新状态

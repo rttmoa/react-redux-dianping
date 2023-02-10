@@ -22,9 +22,12 @@ class Detail extends React.Component {
         return (
             <div>
                 <Header title="商户详情" type="share"/>
+
                 <Info id={id}/>
+
                 {/* 收藏和购买是用户登陆后才可以使用的组件 */}
                 <Buy id={id}/>
+                
                 <Comment id={id}/>
             </div>
         )

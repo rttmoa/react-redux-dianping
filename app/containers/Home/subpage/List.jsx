@@ -7,6 +7,9 @@ import LoadMore from '../../../components/LoadMore'
 
 // import './style.less'
 
+
+
+
 class List extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -89,9 +92,9 @@ class List extends React.Component {
             })
             // console.log('同步2')
         }).catch(ex => {
-            if (__DEV__) {
-                console.error('首页”猜你喜欢“获取数据报错, ', ex.message)
-            }
+            // if (__DEV__) {
+            //     console.error('首页”猜你喜欢“获取数据报错, ', ex.message)
+            // }
         })
     }
 }
