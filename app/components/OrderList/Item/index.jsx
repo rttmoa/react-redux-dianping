@@ -23,7 +23,6 @@ class Item extends React.Component {
         const data = this.props.data
 
         return (
-            // 渲染处理的每一条数据
             <div className="order-item-container">
                 <div className="clear-fix">
 
@@ -35,17 +34,11 @@ class Item extends React.Component {
                     <div className="order-item-comment float-right">
                         {
                             this.state.commentState === 0
-                            // 未评价
                             ? <button className="btn" onClick={this.showComment.bind(this)}>评价</button>
-                            :
-                                this.state.commentState === 1
-                                // 评价中
-                                ? ''
-                                // 已经评价
-                                : <button className="btn unseleted-btn">已评价</button>
+                            : this.state.commentState === 1 ? '' : <button className="btn unseleted-btn">已评价</button>
                         }
                     </div>
-                    
+
                     <div className="order-item-content">
                         <span>商户：{data.title}</span>
                         <span>数量：{data.count}</span>
@@ -58,6 +51,7 @@ class Item extends React.Component {
                     ? <div className="comment-text-container">
                         <textarea style={{width: '100%', height: '80px'}} className="comment-text" ref="commentText"></textarea>
                         <div style={{paddingTop: '10px', paddingBottom: '10px'}}>
+                            {/* 封装<i className={'icon-star'}></i> */}
                             <Star star="0" clickCallback={this.starClickCallback.bind(this)} />
                         </div>
                         <button className="btn" onClick={this.submitComment.bind(this)}>提交</button>
@@ -69,13 +63,11 @@ class Item extends React.Component {
             </div>
         )
     }
-    componentDidMount() {/***--- 钩子渲染每一条数据评价的状态 ---**/
-        // console.log(this.props.data.commentState) // 每一个commentState的状态 0,0,2
-        // 将状态维护到 state 中
+    componentDidMount() { 
         this.setState({ commentState: this.props.data.commentState })
     }
-    showComment() {/***--- 显示输入框 ---**/ 
-        this.setState({commentState: 1})
+    showComment() {
+        this.setState({ commentState: 1 })
     }
     submitComment() {/***--- 点击评价后的操作 ---**/
         // 获取操作函数
@@ -86,7 +78,7 @@ class Item extends React.Component {
         const stars = this.state.stars
         const star = stars[id] || '0'
         // 获取评价内容
-        const commentTextDOM = this.refs.commentText // commentTextDOM是输入的评价信息
+        const commentTextDOM = this.refs.commentText // textarea ref
         const value = commentTextDOM.value.trim()
         if (!value) {
             return
@@ -115,7 +107,6 @@ class Item extends React.Component {
         // stars['id'] = star // {id: 4}
         // stars.id = star // {id: 4}
         stars[id] = star // {1664423526213: 4} 这个id是值传递到对象中
-        // console.log('stars[id]', stars[id]) // 4
 
         console.log('stars', stars) // {1664423526213: 4}
 

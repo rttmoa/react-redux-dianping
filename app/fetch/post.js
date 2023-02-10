@@ -12,7 +12,7 @@ function obj2params(obj) {
     if (result) {
         result = result.slice(1);
     }
-
+    // console.log(result)
     return result;
 }
 
@@ -27,6 +27,6 @@ export function post(url, paramsObj) {
         },
         body: obj2params(paramsObj)
     });
-
+    // console.log(result)
     return result;
 }

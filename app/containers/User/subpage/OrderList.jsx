@@ -49,11 +49,13 @@ class OrderList extends React.Component {
     }
     // 提交评价
     submitComment(id , value, star, callback) {
-        // console.log('OrderList-callback', callback) // this.setState({ commentState: 2});
-        const result = postComment(id, value, star)
-        result.then(res => {
+        // console.log(callback) // this.setState({ commentState: 2});
+
+        const result = postComment(id, value, star) // http://localhost:8080/api/submitComment?id=1675994208090&comment=%E5%A5%BD%E5%90%83&star=4
+        result.then(res => { 
+            // console.log(res)
             return res.json()
-        }).then(json => {
+        }).then(json => { // {errno: 0, msg: 'ok'}
             if (json.errno === 0) {
                 // 已经评价，修改状态
                 callback()

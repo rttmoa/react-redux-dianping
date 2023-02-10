@@ -112,11 +112,10 @@ router.get('/api/orderlist/:username', function *(next) {
 })
 
 // 提交评论
-router.post('/api/submitComment', function (next) {
-    console.log('提交评论')
+router.post('/api/submitComment', function(next) {
+    console.log('提交评论', this)
 
-    // 获取参数
-
+    // 获取参数 
     this.body = {
         errno: 0,
         msg: 'ok'
