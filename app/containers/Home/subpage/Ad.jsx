@@ -14,16 +14,7 @@ class Ad extends React.Component {
     render() {
         // console.log(this.state.data) //有6条记录 ： [6: {title: '暑假5折', img: 'http://images2015.c7796.png',link:"http://www.imooc.com/wap/index"]
         
-        return (
-            <div> 
-                {
-                    this.state.data.length
-                    ? <HomeAd data={this.state.data}/>
-                    // ? <div>显示显示 </div>
-                    : <div>加载中...</div>
-                }   
-            </div>
-        )
+        return <div>{this.state.data.length ? <HomeAd data={this.state.data}/> : <div>加载中...</div>}</div>
     }
     componentDidMount() {
         // 获取广告数据
@@ -36,11 +27,8 @@ class Ad extends React.Component {
             const data = json
             // console.log(data) // true
             if (data.length) this.setState({ data })
-        }).catch(ex => {
-            // 发生错误
-            if (__DEV__) {
-                console.error('首页广告模块获取数据报错, ', ex.message)
-            }
+        }).catch(ex => { 
+            // if (__DEV__) { console.error('首页广告模块获取数据报错, ', ex.message) }
         })
     }
 }

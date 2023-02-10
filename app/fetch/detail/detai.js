@@ -12,6 +12,7 @@ export function getInfoData(id) {
 
 
 export function getCommentData(page, id) {
-    const result = get('/api/detail/comment/' + page + '/' + id)
+    // console.log('/api/detail/comment/' + page + '/' + id)
+    const result = get('/api/detail/comment/' + page + '/' + id)   //-->    /api/detail/comment/1/5889520870693865
     return result
 }

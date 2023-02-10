@@ -3,12 +3,13 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import './style.less'
 
+
+
 class BuyAndStore extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
-    /***--- 可以从控制台的Redux中查看 - Store ---**/
     render() {
         return (
             <div className="buy-store-container clear-fix">
@@ -26,16 +27,10 @@ class BuyAndStore extends React.Component {
             </div>
         ) 
     }
-    buyClickHandle() {
-        // 第一种方式
+    buyClickHandle() { 
         const buyHandle = this.props.buyHandle
         buyHandle()
     }
-    storeClickHandle() {
-        // 第二种方式
-        const storeHandle = 
-        this.props.storeHandle()
-    }
-}
-
+    storeClickHandle() { this.props.storeHandle() }
+} 
 export default BuyAndStore

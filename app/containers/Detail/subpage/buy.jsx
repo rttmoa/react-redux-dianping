@@ -8,6 +8,8 @@ import * as storeActionsFromFile from '../../../actions/store'
 
 import BuyAndStore from '../../../components/BuyAndStore'
 
+
+
 class Buy extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -25,14 +27,14 @@ class Buy extends React.Component {
             />
         )
     }
-    componentDidMount() {
-        // 验证当前商户是否收藏
-        this.checkStoreState()
-    }
-    // 检验当前商户是否被收藏
+    /***--- 验证当前商户是否收藏 ---**/
+    componentDidMount() { this.checkStoreState() }
+    
+    /***--- 检验当前商户是否被收藏 ---**/
     checkStoreState() {
         const id = this.props.id
-        const store = this.props.store // redux中获取store
+        const store = this.props.store // 商户详情 收藏
+        // console.log(store)
 
         // store.some(item => {})
         store.forEach(item => {
@@ -45,7 +47,7 @@ class Buy extends React.Component {
             }
         })
     }
-    // 检查登录状态
+    /***--- 检查登录状态 ---**/
     loginCheck() {
         const id = this.props.id
         const userinfo = this.props.userinfo
@@ -60,22 +62,18 @@ class Buy extends React.Component {
     buyHandle() {
         // 验证登录，未登录则retur
         const loginFlag = this.loginCheck()
-        if (!loginFlag) {
-            return
-        }
+        if (!loginFlag) { return }
 
         // 此过程为模拟购买，因此可省去复杂的购买过程
 
         // 跳转到用户主页
-        hashHistory.push('/User')
+        // hashHistory.push('/User')
     }
     // 收藏事件
     storeHandle() {
         // 验证登录，未登录则return
         const loginFlag = this.loginCheck()
-        if (!loginFlag) {
-            return
-        }
+        if (!loginFlag) { return }
 
         const id = this.props.id
         const storeActions = this.props.storeActions // storeActions下有 rm、add、update方法
@@ -93,22 +91,16 @@ class Buy extends React.Component {
             isStore: !this.state.isStore
         })
     }
-}
-
+} 
 function mapStateToProps(state) {
     return {
         userinfo: state.userinfo,
         store: state.store
     }
-}
-
+} 
 function mapDispatchToProps(dispatch) {
     return {
-        storeActions: bindActionCreators(storeActionsFromFile, dispatch) // store需要dispatch
-        // 测试userinfo的redux
+        storeActions: bindActionCreators(storeActionsFromFile, dispatch) 
     }
 }
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Buy)
+export default connect( mapStateToProps, mapDispatchToProps )(Buy)

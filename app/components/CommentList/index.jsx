@@ -16,9 +16,11 @@ class CommentList extends React.Component {
 
         return (
             <div className="comment-list">
-                {data.map((item, index) => {
-                    return <Item key={index} data={item}/>
-                })}
+                {
+                    data.map((item, index) => {
+                        return <Item key={index} data={item}/>
+                    })
+                }
             </div>
         )
     }

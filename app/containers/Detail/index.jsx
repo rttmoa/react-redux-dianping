@@ -6,19 +6,16 @@ import Info from './subpage/Info'
 import Buy from './subpage/buy'
 import Comment from './subpage/Comment'
 
-/**
- * 开发详情页-获取商户信息
- * 
- */
+
+
+/**开发详情页-获取商户信息*/
 class Detail extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
-        // 获取商户ID
-        const id = this.props.params.id
-
+        const id = this.props.params.id; // 获取商户ID 
         return (
             <div>
                 <Header title="商户详情" type="share"/>
@@ -27,7 +24,7 @@ class Detail extends React.Component {
 
                 {/* 收藏和购买是用户登陆后才可以使用的组件 */}
                 <Buy id={id}/>
-                
+
                 <Comment id={id}/>
             </div>
         )

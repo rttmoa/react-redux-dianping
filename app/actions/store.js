@@ -5,20 +5,21 @@ import * as actionTypes from '../constants/store'
 
 
 
+/**--- redux更新 ---**/
 export function update(data) {
     return {
         type: actionTypes.STORE_UPDATE,
         data
     }
 }
-
+/**--- redux添加 ---**/
 export function add(item) {
     return {
         type: actionTypes.STORE_ADD,
         data: item
     }
 }
-
+/**--- redux移除 ---**/
 export function rm(item) {
     return {
         type: actionTypes.STORE_RM,

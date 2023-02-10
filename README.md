@@ -14,7 +14,7 @@
 * [X] Webpack配置(开发与生产环境)
 * [X] Class组件开发
 * [X] 路由跳转 及 请求参数
-* [ ] 字体、图标
+* [X] 字体、图标
 * [X] 轮播图 | 超值特惠 | 猜你喜欢 本地图片渲染 &  远程地址(error)
 * [X] import * as Name from ""
 
@@ -50,6 +50,11 @@
   }
   节流函数、滚动加载 <LoadMore />组件   |  window.addEventListener('scroll', function () {}
   ```
-* [ ] 啊
-* [ ] 的
-* [ ] 的
+* [ ] Detail页面
+
+  ```
+  购买拦截：hashHistory.push('/Login/' + encodeURIComponent('/detail/' + id))
+  	 <Route path='/Login(/:router)' component={Login}/>
+  获取首页数据:    /api/detail/comment/1/5889520870693865
+  ```
+* [ ] new
