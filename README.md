@@ -35,7 +35,19 @@
   ```
   Redux取值、Redux储存、localstoreage存储、history跳转
   ```
-* [ ] a
+* [ ] Search页面
+
+  ```
+  window.history.back()
+  hashHistory.push('/search/all/' + encodeURIComponent(value))
+  /api/search/0/北京/all/UserName长
+  根据城市名+文章+关键词发请求
+  滚动加载 获取数据 重新渲染
+  处理重新搜索：componentDidUpdate(prevProps, prevState) {
+  	if (keyword === prevProps.keyword && category === prevProps.category) { return } 
+  }
+  节流函数、滚动加载 <LoadMore />组件   |  window.addEventListener('scroll', function () {}
+  ```
 * [ ] 啊
 * [ ] 的
 * [ ] 的

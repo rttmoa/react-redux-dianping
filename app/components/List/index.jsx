@@ -5,6 +5,8 @@ import Item from './Item'
 
 import './style.less'
 
+
+
 class List extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -13,9 +15,11 @@ class List extends React.Component {
     render() {
         return (
             <div className="list-container"> {/* css样式：bgc、padding */}
-                {this.props.data.map((item, index) => {
-                    return <Item key={index} data={item}/> /* 渲染每一项、每一条数据 */
-                })}
+                {
+                    this.props.data.map((item, index) => {
+                        return <Item key={index} data={item}/>  
+                    })
+                }
             </div>
         )
     }

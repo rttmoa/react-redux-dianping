@@ -15,7 +15,6 @@ class HomeHeader extends React.Component {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
-    // 页面头部 - 左侧、中间Input、右侧个人信息部分
     render() {
         return (
             <div id="home-header" className="clear-fix">
@@ -33,8 +32,7 @@ class HomeHeader extends React.Component {
                 </div>
                 <div className="home-header-middle">
                     <div className="search-container">
-                        <i className="icon-search"></i>
-                        &nbsp;
+                        <i className="icon-search"></i>&nbsp;
                         <SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>
                     </div>
                 </div>
@@ -42,6 +40,9 @@ class HomeHeader extends React.Component {
         )
     }
     enterHandle(value) {
+        let res = `/search/all/${encodeURIComponent(value)}` // UserName长  --> /search/all/UserName%E9%95%BF
+        // console.log(res)
+        // return
         hashHistory.push('/search/all/' + encodeURIComponent(value))
     }
 }

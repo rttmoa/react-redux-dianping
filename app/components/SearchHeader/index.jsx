@@ -6,11 +6,14 @@ import SearchInput from '../SearchInput'
 
 import './style.less'
 
+
+/***--- 搜索页 ---**/
 class SearchHeader extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
+    // 处理重新搜索
     render() {
         return (
             <div id="search-header" className="clear-fix">
@@ -18,8 +21,7 @@ class SearchHeader extends React.Component {
                     <i className="icon-chevron-left"></i>
                 </span>
                 <div className="input-container">
-                    <i className="icon-search"></i>
-                    &nbsp;
+                    <i className="icon-search"></i>&nbsp;
                     <SearchInput value={this.props.keyword || ''} enterHandle={this.enterHandle.bind(this)}/>
                 </div>
             </div>

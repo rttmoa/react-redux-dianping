@@ -5,6 +5,8 @@ import { Link } from 'react-router'
 import imgs from '../Item/marry.png'
 import './style.less'
 
+
+
 class ListItem extends React.Component {
     constructor(props, context) {
         super(props, context);

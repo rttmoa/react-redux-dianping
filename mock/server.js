@@ -54,7 +54,7 @@ router.get('/api/search/:page/:city/:category/:keyword', function *(next) {
 })
 
 // 搜索结果页 - 搜索结果 - 两个参数
-router.get('/api/search/:page/:city/:category', function *(next) {
+router.get('/api/search/:page/:city/:category', function(next) {  //->   /api/search/0/北京/all/UserName长
     console.log('搜索结果页 - 搜索结果')
 
     // 参数
@@ -72,7 +72,7 @@ router.get('/api/search/:page/:city/:category', function *(next) {
 
 // 详情页 - 商户信息
 const detailInfo = require('./detail/info.js')
-router.get('/api/detail/info/:id', function *(next) {
+router.get('/api/detail/info/:id', function(next) {
     console.log('详情页 - 商户信息')
 
     const params = this.params
@@ -85,7 +85,7 @@ router.get('/api/detail/info/:id', function *(next) {
 
 // 详情页 - 用户评论
 const detailComment = require('./detail/comment.js')
-router.get('/api/detail/comment/:page/:id', function *(next) {
+router.get('/api/detail/comment/:page/:id', function(next) {
     console.log('详情页 - 用户点评')
 
     const params = this.params
@@ -100,7 +100,7 @@ router.get('/api/detail/comment/:page/:id', function *(next) {
 
 // 订单列表
 const orderList = require('./orderlist/orderList.js')
-router.get('/api/orderlist/:username', function(next) {
+router.get('/api/orderlist/:username', function(next) { //->   /api/orderlist/zhangsan
     console.log('订单列表')
 
     const params = this.params
@@ -112,7 +112,7 @@ router.get('/api/orderlist/:username', function(next) {
 })
 
 // 提交评论
-router.post('/api/submitComment', function(next) {
+router.post('/api/submitComment', function(next) { 
     console.log('提交评论', this)
 
     // 获取参数 

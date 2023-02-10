@@ -30,7 +30,7 @@ class RouterMap extends React.Component {
                     <Route path='/User' component={User}/>{/* ! */}
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
-                    <Route path='*' component={NotFound}/>
+                    <Route path='*' component={NotFound}/>{/* ! */}
                 </Route>
             </Router>
         )
