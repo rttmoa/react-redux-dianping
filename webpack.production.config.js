@@ -23,7 +23,7 @@ module.exports = {
       'es6-promise', 
       'whatwg-fetch', 
       'immutable'
-    ]
+    ] 
   },
   output: {
     path: __dirname + "/build",

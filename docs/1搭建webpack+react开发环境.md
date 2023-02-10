@@ -2,7 +2,7 @@
 
 我在实际工作中用百度 [fis3](http://fis.baidu.com/) 搭建 React 开发环境，但是放在整个前端社区中，webpack 肯定更适合大家，这里就用 webpack。如果之前未听说或者未用过 webpack 的同学，一定此机会恶补一下，也可以查阅[官网](https://webpack.github.io/)
 
-## 开始之前
+## 开始之前 
 
 - 我目前使用的系统是 mac os 系统，使用 windows 的同学建议在执行本课程的命令行时，使用一个模拟 linux 命令的工具，例如 `xshell`
 - 能科学上网最好，否则就需要你在某些过程中耐心等待
