@@ -35,7 +35,7 @@ router.get('/api/homelist/:city/:page', function (next) {
 
 // 搜索结果页 - 搜索结果 - 三个参数
 var searchListData = require('./search/list.js')
-router.get('/api/search/:page/:city/:category/:keyword', function *(next) {
+router.get('/api/search/:page/:city/:category/:keyword', function(next) {
     console.log('搜索结果页 - 搜索结果')
 
     // 参数
@@ -72,7 +72,7 @@ router.get('/api/search/:page/:city/:category', function(next) {  //->   /api/se
 
 // 详情页 - 商户信息
 const detailInfo = require('./detail/info.js')
-router.get('/api/detail/info/:id', function(next) {
+router.get('/api/detail/info/:id', function(next) {   //-->    /api/detail/info/5934707649654805
     console.log('详情页 - 商户信息')
 
     const params = this.params

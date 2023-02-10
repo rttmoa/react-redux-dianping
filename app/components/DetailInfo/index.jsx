@@ -2,8 +2,10 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Star from '../../components/Star'
-
+import IMG from './串串香.png'
 import './style.less'
+
+
 
 class DetailInfo extends React.Component {
     constructor(props, context) {
@@ -18,12 +20,11 @@ class DetailInfo extends React.Component {
             <div id="detail-info-container">
                 <div className="info-container clear-fix">
                     <div className="info-img-container float-left">
-                        <img src={data.img}/>
+                        <img src={IMG} />
                     </div>
                     <div className="info-content">
                         <h1>{data.title}</h1>
                         <div className="star-container">
-                            {/* 引用 Star 组件 - 处理满意度问题 */}
                             <Star star={data.star}/>
                             <span className="price">￥{data.price}</span>
                         </div>

@@ -4,6 +4,8 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { getInfoData } from '../../../fetch/detail/detai'
 import DetailInfo from '../../../components/DetailInfo'
 
+// import s from '../../../../mock/server'
+
 
 
 class Info extends React.Component {
@@ -15,9 +17,8 @@ class Info extends React.Component {
         }
     }
     render() {
-        return (
-            <div> {this.state.info ? <DetailInfo data={this.state.info}/> : ""} </div>
-        )
+        // console.log(this.state.info)
+        return (<div> { this.state.info ? <DetailInfo data={this.state.info}/> : "" } </div>)
     }
     /***--- 获取商户信息 ---**/
     componentDidMount() { this.getInfo() }

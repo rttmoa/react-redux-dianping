@@ -7,6 +7,10 @@ import LoadMore from '../../../components/LoadMore'
 
 import './style.less'
 
+
+
+
+
 class Comment extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -81,9 +85,9 @@ class Comment extends React.Component {
                 data: this.state.data.concat(data)
             })
         }).catch(ex => {
-            if (__DEV__) {
-                console.error('详情页获取用户评论数据出错, ', ex.message)
-            }
+            // if (__DEV__) {
+            //     console.error('详情页获取用户评论数据出错, ', ex.message)
+            // }
         })
     }
 }
