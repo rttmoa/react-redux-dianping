@@ -14,7 +14,7 @@
 * [X] Webpack配置(开发与生产环境)
 * [X] Class组件开发
 * [X] 路由跳转 及 请求参数
-* [X] 字体、图标
+* [X] 全局Less、IconFont图标(eot,svg,ttf,woff)的配置：[icomoon](https://icomoon.io/app/#/select)
 * [X] 轮播图 | 超值特惠 | 猜你喜欢 本地图片渲染 &  远程地址(error)
 * [X] import * as Name from ""
 
@@ -29,15 +29,15 @@
   export default connect( mapStateToProps, mapDispatchToProps )(Home)
   ```
 * [X] Login页面登陆后、刷新页面、Redux数据消失 --> 解决办法  1、使用localstoreage  2、redux持久化(persist)
-* [ ] Login页面父子组件传值
-* [ ] User页面组件封装(订单评价)
-* [ ] User页面订单列表接口 & 提交评论接口
-* [ ] City页面
+* [X] Login页面父子组件传值
+* [X] User页面组件封装(订单评价)
+* [X] User页面订单列表接口 & 提交评论接口
+* [X] City页面
 
   ```
   Redux取值、Redux储存、localstoreage存储、history跳转
   ```
-* [ ] Search页面
+* [X] Search页面
 
   ```
   window.history.back()
@@ -50,11 +50,12 @@
   }
   节流函数、滚动加载 <LoadMore />组件   |  window.addEventListener('scroll', function () {}
   ```
-* [ ] Detail页面
+* [X] Detail页面
 
   ```
   购买拦截：hashHistory.push('/Login/' + encodeURIComponent('/detail/' + id))
   	 <Route path='/Login(/:router)' component={Login}/>
   获取首页数据:    /api/detail/comment/1/5889520870693865
   ```
-* [ ] new
+* [ ] Home页面
+* [ ] 主

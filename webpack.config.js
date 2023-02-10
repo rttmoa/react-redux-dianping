@@ -26,7 +26,7 @@ module.exports = {
             { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel' },
             { test: /\.less$/, exclude: /node_modules/, loader: 'style!css!postcss!less' },
             { test: /\.css$/, exclude: /node_modules/, loader: 'style!css!postcss' },
-            // { test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=400000' },  // 限制大小40kb
+            // { test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=400000' },  // 限制大小40kb  (图片大小>40kb，所以渲染不出)
             { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader:'url-loader?limit=50000'} // 限制大小小于5k
         ]
     },
